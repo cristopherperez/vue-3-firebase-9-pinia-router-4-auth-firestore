@@ -5,6 +5,9 @@ import { initializeApp } from "firebase/app";
 // importar metodo para la autenticacion y llamarlo
 import { getAuth } from "firebase/auth";
 
+// importacion para obtener la base de datos
+import { getFirestore } from "firebase/firestore/lite";
+
 // config para iniciar la app
 const firebaseConfig = {
   apiKey: "AIzaSyDLG0zWXcrt0PGNATIQhejpVPsibNLqnKg",
@@ -18,5 +21,6 @@ const firebaseConfig = {
 initializeApp(firebaseConfig);
 
 const auth = getAuth();
+const db = getFirestore();
 
-export { auth };
+export { auth, db };
